@@ -12,11 +12,30 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous"
+  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    
+    <link rel="stylesheet" href="booksstyle.css" />
     <link rel="stylesheet" href="../../style.css" />
-  </head>
-                                          <!-- Home Page Navbar -->
+   
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="booksapp.js"></script>
+
+
+  </head>
+  <!-- Home Page Navbar -->
 
   <body class="hero-anime">
     <div class="navigation-wrap bg-light start-header start-style">
@@ -28,7 +47,13 @@
                 class="navbar-brand"
                 href="#"
                 ><img src="./product page/images/logo.jpeg" alt="logo" class="head-logo" /></a> -->
-                <img src="../../logo.jpeg" alt="logo" class="head-logo" width="40px" height="40px"/>
+              <img
+                src="../../logo.jpeg"
+                alt="logo"
+                class="head-logo"
+                width="40px"
+                height="40px"
+              />
 
               <button
                 class="navbar-toggler"
@@ -44,23 +69,33 @@
 
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto py-4 py-md-0">
-                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                     <a class="nav-link" href="../../janapada.html">Home</a>
                   </li>
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
                     <a class="nav-link" href="#">About Us</a>
                   </li>
-                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 ">
-                    <a class="nav-link" href="../product/product.html">Products</a>
+                  <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                    <a class="nav-link" href="../product/product.html"
+                      >Products</a
+                    >
                   </li>
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
-									  <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-									  </div>
+                    <a
+                      class="nav-link dropdown-toggle"
+                      data-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      >Services</a
+                    >
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </div>
                   </li>
                   <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active">
                     <a class="nav-link" href="#">Books</a>
@@ -75,7 +110,7 @@
         </div>
       </div>
     </div>
-    <div class="section full-height">
+    <div class="section full-height" id="height">
       <!-- <div class="absolute-center">
         <div class="section">
           <div class="container">
@@ -92,14 +127,355 @@
         </div>
       </div> -->
     </div>
-    <div class="my-5 py-5"></div>
-        <!-- -------------------------Navbar ENDs Here --------------------- -->
+    <!-- <div class="my-5 py-5" ></div> -->
+    <!-- -------------------------Navbar ENDs Here --------------------- -->
     <!-- ----------------Books starts here--------------------------- -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+    <div class="input-group mb-3" id="search">
+      <input
+        type="text"
+        class="form-control"
+        id="search-item"
+        placeholder="Search for a book or Author here...."
+        aria-label="Recipient's username"
+        aria-describedby="basic-addon2"
+        onkeyup="search()"
+      />
+      <button id="srch" type="button" class="btn btn-outline-secondary">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+
+    <div class="filter">
+      <div class="price">
+        <span>Filter by Price</span><br />
+
+        <div>
+          <input class="filter1" type="checkbox" id="price1" />
+          <label for="price1">Price less than 500</label>
+        </div>
+        <div>
+          <input class="filter1" type="checkbox" id="price2" />
+          <label for="price2">500 - 750</label>
+        </div>
+        <div>
+          <input class="filter1" type="checkbox" id="price3" />
+          <label for="price3">750 - 1000</label>
+        </div>
+        <div>
+          <input class="filter1" type="checkbox" id="price4" />
+          <label for="price4">Price greater than 1000</label>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="fiction">
+        <span>Fiction/Non - Fiction</span>
+        <div>
+          <input type="checkbox" id="fiction1" />
+          <label for="fiction1">Fiction</label>
+        </div>
+        <div>
+          <input type="checkbox" id="fiction2" />
+          <label for="fiction2">Non - Fiction</label>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="newBook">
+        <span>New to store</span>
+        <div>
+          <input type="checkbox" id="new1" />
+          <label for="new1">Past 60 days</label>
+        </div>
+        <div>
+          <input type="checkbox" id="new2" />
+          <label for="new2">past 90 days</label>
+        </div>
+        <div>
+          <input type="checkbox" id="new3" />
+          <label for="new3">Past 180 days</label>
+        </div>
+        <div>
+          <input type="checkbox" id="new4" />
+          <label for="new4">Over 180 days</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="vl"></div>
+
+    <div class="book-cards" id="book-cards">
+      <div class="book-card" data-item="Changes Are">
+        <div class="content-wrapper">
+          <img
+            src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2019%2F07%2Fchances-are-1-2000.jpg&q=85"
+            alt=""
+            class="book-card-img"
+          />
+          <div class="card-content">
+            <div class="book-name">Changes Are</div>
+            <div class="book-by">by Richard Russo</div>
+            <div class="rate">
+              <fieldset class="rating book-rate">
+                <input type="checkbox" id="star-c1" name="rating" value="5" />
+                <label class="full" for="star-c1"></label>
+                <input type="checkbox" id="star-c2" name="rating" value="4" />
+                <label class="full" for="star-c2"></label>
+                <input type="checkbox" id="star-c3" name="rating" value="3" />
+                <label class="full" for="star-c3"></label>
+                <input type="checkbox" id="star-c4" name="rating" value="2" />
+                <label class="full" for="star-c4"></label>
+                <input type="checkbox" id="star-c5" name="rating" value="1" />
+                <label class="full" for="star-c5"></label>
+              </fieldset>
+              <span class="book-voters card-vote"></span>
+            </div>
+            <div class="book-sum card-sum">
+              Readers of all ages and walks of life have drawn inspiration and
+              empowerment from Elizabeth Gilbert’s books for years.
+            </div>
+          </div>
+        </div>
+        <div class="priceGiven">
+          &#8377;<span>200</span>
+          <!-- <button type="button" class="btn btn-outline-secondary" id="buyBtn1">Buy</button> -->
+        </div>
+      </div>
+      <div class="book-card" data-item="Dominicana">
+        <div class="content-wrapper">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/7167iiDUeAL.jpg"
+            alt=""
+            class="book-card-img"
+          />
+          <div class="card-content">
+            <div class="book-name">Dominicana</div>
+            <div class="book-by">by Angie Cruz</div>
+            <div class="rate">
+              <fieldset class="rating book-rate">
+                <input type="checkbox" id="star-c6" name="rating" value="5" />
+                <label class="full" for="star-c6"></label>
+                <input type="checkbox" id="star-c7" name="rating" value="4" />
+                <label class="full" for="star-c7"></label>
+                <input type="checkbox" id="star-c8" name="rating" value="3" />
+                <label class="full" for="star-c8"></label>
+                <input type="checkbox" id="star-c9" name="rating" value="2" />
+                <label class="full" for="star-c9"></label>
+                <input type="checkbox" id="star-c10" name="rating" value="1" />
+                <label class="full" for="star-c10"></label>
+              </fieldset>
+              <span class="book-voters card-vote"></span>
+            </div>
+            <div class="book-sum card-sum">
+              Readers of all ages and walks of life have drawn inspiration and
+              empowerment from Elizabeth Gilbert’s books for years.
+            </div>
+          </div>
+        </div>
+        <div class="priceGiven">&#8377;<span>300</span></div>
+      </div>
+      <div class="book-card" data-item="The Travellers">
+        <div class="content-wrapper">
+          <img
+            src="https://assets.fontsinuse.com/static/use-media-items/95/94294/full-2000x3056/5d56c6b1/cg%201.jpeg?resolution=0"
+            alt=""
+            class="book-card-img"
+          />
+          <div class="card-content">
+            <div class="book-name">The Travellers</div>
+            <div class="book-by">by Regina Porter</div>
+            <div class="rate">
+              <fieldset class="rating book-rate">
+                <input type="checkbox" id="star-c11" name="rating" value="5" />
+                <label class="full" for="star-c11"></label>
+                <input type="checkbox" id="star-c12" name="rating" value="4" />
+                <label class="full" for="star-c12"></label>
+                <input type="checkbox" id="star-c13" name="rating" value="3" />
+                <label class="full" for="star-c13"></label>
+                <input type="checkbox" id="star-c14" name="rating" value="2" />
+                <label class="full" for="star-c14"></label>
+                <input type="checkbox" id="star-c15" name="rating" value="1" />
+                <label class="full" for="star-c15"></label>
+              </fieldset>
+              <span class="book-voters card-vote"></span>
+            </div>
+            <div class="book-sum card-sum">
+              Readers of all ages and walks of life have drawn inspiration and
+              empowerment from Elizabeth Gilbert’s books for years.
+            </div>
+          </div>
+        </div>
+        <div class="priceGiven">&#8377;<span>500</span></div>
+      </div>
+      <div class="book-card" data-item="Afternoon Of A Faun">
+        <div class="content-wrapper">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/91M4E+SURUL.jpg"
+            alt=""
+            class="book-card-img"
+          />
+          <div class="card-content">
+            <div class="book-name">Afternoon Of A Faun</div>
+            <div class="book-by">by James Lasdun</div>
+            <div class="rate">
+              <fieldset class="rating book-rate">
+                <input type="checkbox" id="star-c16" name="rating" value="5" />
+                <label class="full" for="star-c16"></label>
+                <input type="checkbox" id="star-c17" name="rating" value="4" />
+                <label class="full" for="star-c17"></label>
+                <input type="checkbox" id="star-18" name="rating" value="3" />
+                <label class="full" for="star-c18"></label>
+                <input type="checkbox" id="star-c19" name="rating" value="2" />
+                <label class="full" for="star-c19"></label>
+                <input type="checkbox" id="star-c20" name="rating" value="1" />
+                <label class="full" for="star-c20"></label>
+              </fieldset>
+              <span class="book-voters card-vote"></span>
+            </div>
+            <div class="book-sum card-sum">
+              Readers of all ages and walks of life have drawn inspiration and
+              empowerment from Elizabeth Gilbert’s books for years.
+            </div>
+          </div>
+        </div>
+        <div class="priceGiven">&#8377;<span>600</span></div>
+      </div>
+      <div class="book-card" data-item="Flash Count Diary">
+        <div class="content-wrapper">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/61OTY2-4anL.jpg"
+            alt=""
+            class="book-card-img"
+          />
+          <div class="card-content">
+            <div class="book-name">Flash Count Diary</div>
+            <div class="book-by">by Darcey Steinke</div>
+            <div class="rate">
+              <fieldset class="rating book-rate">
+                <input type="checkbox" id="star-c21" name="rating" value="5" />
+                <label class="full" for="star-c21"></label>
+                <input type="checkbox" id="star-c22" name="rating" value="4" />
+                <label class="full" for="star-c22"></label>
+                <input type="checkbox" id="star-c23" name="rating" value="3" />
+                <label class="full" for="star-c23"></label>
+                <input type="checkbox" id="star-c24" name="rating" value="2" />
+                <label class="full" for="star-c24"></label>
+                <input type="checkbox" id="star-c25" name="rating" value="1" />
+                <label class="full" for="star-c25"></label>
+              </fieldset>
+              <span class="book-voters card-vote"></span>
+            </div>
+            <div class="book-sum card-sum">
+              Readers of all ages and walks of life have drawn inspiration and
+              empowerment from Elizabeth Gilbert’s books for years.
+            </div>
+          </div>
+        </div>
+        <div class="priceGiven">&#8377;<span>800</span></div>
+      </div>
+      <div class="book-card" data-item="Picnic Comma Lightning">
+        <div class="content-wrapper">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/61Vc+xM23GL.jpg"
+            alt=""
+            class="book-card-img"
+          />
+          <div class="card-content">
+            <div class="book-name">Picnic Comma Lightning</div>
+            <div class="book-by">by Lucy Parker</div>
+            <div class="rate">
+              <fieldset class="rating book-rate">
+                <input type="checkbox" id="star-c1" name="rating" value="5" />
+                <label class="full" for="star-c1"></label>
+                <input type="checkbox" id="star-c2" name="rating" value="4" />
+                <label class="full" for="star-c2"></label>
+                <input type="checkbox" id="star-c3" name="rating" value="3" />
+                <label class="full" for="star-c3"></label>
+                <input type="checkbox" id="star-c4" name="rating" value="2" />
+                <label class="full" for="star-c4"></label>
+                <input type="checkbox" id="star-c5" name="rating" value="1" />
+                <label class="full" for="star-c5"></label>
+              </fieldset>
+              <span class="book-voters card-vote"></span>
+            </div>
+            <div class="book-sum card-sum">
+              Readers of all ages and walks of life have drawn inspiration and
+              empowerment from Elizabeth Gilbert’s books for years.
+            </div>
+          </div>
+        </div>
+        <div class="priceGiven">&#8377;<span>400</span></div>
+      </div>
+      <div class="book-card" data-item="Very Nica">
+        <div class="content-wrapper">
+          <img
+            src="https://prodimage.images-bn.com/pimages/9780525655633_p0_v5_s1200x630.jpg"
+            alt=""
+            class="book-card-img"
+          />
+          <div class="card-content">
+            <div class="book-name">Very Nica</div>
+            <div class="book-by">by Lucy Parker</div>
+            <div class="rate">
+              <fieldset class="rating book-rate">
+                <input type="checkbox" id="star-c1" name="rating" value="5" />
+                <label class="full" for="star-c1"></label>
+                <input type="checkbox" id="star-c2" name="rating" value="4" />
+                <label class="full" for="star-c2"></label>
+                <input type="checkbox" id="star-c3" name="rating" value="3" />
+                <label class="full" for="star-c3"></label>
+                <input type="checkbox" id="star-c4" name="rating" value="2" />
+                <label class="full" for="star-c4"></label>
+                <input type="checkbox" id="star-c5" name="rating" value="1" />
+                <label class="full" for="star-c5"></label>
+              </fieldset>
+              <span class="book-voters card-vote"></span>
+            </div>
+            <div class="book-sum card-sum">
+              Readers of all ages and walks of life have drawn inspiration and
+              empowerment from Elizabeth Gilbert’s books for years.
+            </div>
+          </div>
+        </div>
+        <div class="priceGiven">&#8377;<span>450</span></div>
+      </div>
+      <div class="book-card" data-item="Stay And Fight">
+        <div class="content-wrapper">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/71PL7BiZ5NL.jpg"
+            alt=""
+            class="book-card-img"
+          />
+          <div class="card-content">
+            <div class="book-name">Stay And Fight</div>
+            <div class="book-by">by Lucy Parker</div>
+            <div class="rate">
+              <fieldset class="rating book-rate">
+                <input type="checkbox" id="star-c1" name="rating" value="5" />
+                <label class="full" for="star-c1"></label>
+                <input type="checkbox" id="star-c2" name="rating" value="4" />
+                <label class="full" for="star-c2"></label>
+                <input type="checkbox" id="star-c3" name="rating" value="3" />
+                <label class="full" for="star-c3"></label>
+                <input type="checkbox" id="star-c4" name="rating" value="2" />
+                <label class="full" for="star-c4"></label>
+                <input type="checkbox" id="star-c5" name="rating" value="1" />
+                <label class="full" for="star-c5"></label>
+              </fieldset>
+              <span class="book-voters card-vote"></span>
+            </div>
+            <div class="book-sum card-sum">
+              Readers of all ages and walks of life have drawn inspiration and
+              empowerment from Elizabeth Gilbert’s books for years.
+            </div>
+          </div>
+        </div>
+        <div class="priceGiven">&#8377;<span>550</span></div>
+      </div>
+    </div>
 
     <!-- JavaScript Bundle with Popper -->
     <!-- <script
@@ -109,9 +485,10 @@
     ></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="productApp.js"></script>
   </body>
